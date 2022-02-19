@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devtest - Chaordic</title>
+    <title>DevChallenge - Chaordic</title>
 </head>
 <body>
     <header class="header">
@@ -35,26 +35,26 @@
                 <form>
                     <p>
                         <label for="name">Seu nome</label>
-                        <input type="text" name="name">
+                        <input type="text" class="input input-text" name="name">
                     </p>
 
                     <p>
                         <label for="email">E-mail</label>
-                        <input type="email" name="email">
+                        <input type="email" class="input input-text" name="email">
                     </p>
 
                     <p>
                         <label for="cpf">CPF</label>
-                        <input type="number" name="cpf">
+                        <input type="number" class="input input-text" name="cpf">
                     </p>
                     
                     <p>
-                        <input type="radio" name="sex"> Masculino
-                        <input type="radio" name="sex"> Feminino
+                        <input type="radio" class="input input-radio" name="gender" value="male"> Masculino
+                        <input type="radio" class="input input-radio" name="gender" value="female"> Feminino
                     </p>
 
                     <p>
-                        <input class="button b" type="button" value="Enviar">
+                        <input class="button button-form" type="submit" value="Enviar">
                     </p>
                 </form>
             </div>
@@ -230,6 +230,26 @@
 
         </section>
 
+        <section class="share-friend">
+            <h2>Compartilhe a novidade</h2>
+            <p>Quer que seus amigos também ganhem a lista personalizada? Preencha agora!</p>
+
+            <div class="share-form">
+                <form>
+                    <p>
+                        <label for="friend-name">Nome do seu amigo:</label>
+                        <input type="text" class="input input-text" name="friend-name">
+                    </p>
+                    <p>
+                        <label for="friend-email">E-mail:</label>
+                        <input type="email" class="input input-text" name="friend-email">
+                    </p>
+                    <p>
+                        <input type="submit" class="button button-form" value="Enviar agora">
+                    </p>
+                </form>
+            </div>
+        </section>
     </div>
 </body>
 </html>

@@ -22,14 +22,25 @@ Author: Joares Miranda
     box-sizing: border-box;
 }
 
+
+/*
+* Variables
+*/
+:root {
+    --dark-gray: #707070;
+    --gray: #888;
+    --light-gray: #D6D6D6;
+    --white: #FFF;
+}
+
+
 /* 
 * Global
 */
 body {
     font-family: 'Arimo', 'Helvetica', sans-serif;
-    color: #333;
+    color: var(--gray);
 }
-
 
 /* 
 * Container
@@ -48,8 +59,29 @@ a {
 /* 
 * Header
 */
+header {
+    position: relative;
+    height: 400px;
+}
+
+header:before {
+    background-color: var(--dark-gray);
+    content: '';
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 70%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container-header {
+    position: relative;
+}
+
 .header-info {
     padding: 3.5rem 0;
+    color: var(--white);
 }
 @media (min-width:768px) {
     .header-info {
@@ -95,9 +127,10 @@ nav ul {
 }
 
 nav ul li {
-    border: 1px solid #707070;
+    border: 1px solid var(--dark-gray);
     border-radius: 4px;
-    box-shadow: 0 1px 6px #00000029;
+    box-shadow: 0 1px 6px var(--gray);
+    background-color: var(--white);
     text-align: center;
     font-size: 0.875rem;
     margin: 0.6rem;
@@ -108,7 +141,7 @@ nav ul li {
     }
 }
 nav ul li:hover {
-    background-color: #CCC;
+    background-color: var(--light-gray);
     transition: 0.3s;
 }
 
@@ -116,4 +149,5 @@ nav li a {
     display: block;
     width: 160px;
     padding: 0.8rem 0;
+    color: var(--gray);
 }

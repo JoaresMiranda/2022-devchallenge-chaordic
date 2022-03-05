@@ -22,6 +22,132 @@ Author: Joares Miranda
     box-sizing: border-box;
 }
 
+
+/*
+* Variables
+*/
+:root {
+    --dark-gray: #707070;
+    --gray: #888;
+    --light-gray: #D6D6D6;
+    --white: #FFF;
+}
+
+
 /* 
 * Global
 */
+body {
+    font-family: 'Arimo', 'Helvetica', sans-serif;
+    color: var(--gray);
+}
+
+/* 
+* Container
+*/
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding:0 1rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 
+* Header
+*/
+header {
+    position: relative;
+    height: 400px;
+}
+
+header:before {
+    background-color: var(--dark-gray);
+    content: '';
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 70%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container-header {
+    position: relative;
+}
+
+.header-info {
+    padding: 3.5rem 0;
+    color: var(--white);
+}
+@media (min-width:768px) {
+    .header-info {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+}
+
+.header-info__hat {
+    font-size: 1.25rem;
+}
+
+.header-info__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header-info__description {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+@media (min-width:768px) {
+    .header-info__description {
+        margin-top: 1.5rem;
+    }
+}
+
+nav {
+    width: 390px;
+    margin: 0 auto;
+}
+@media (min-width:768px) {
+    nav {
+        width: 100%;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    border: 1px solid var(--dark-gray);
+    border-radius: 4px;
+    box-shadow: 0 1px 6px var(--gray);
+    background-color: var(--white);
+    text-align: center;
+    font-size: 0.875rem;
+    margin: 0.6rem;
+}
+@media (min-width:1024px) {
+    nav ul li {
+        margin: 1rem 1.25rem;
+    }
+}
+nav ul li:hover {
+    background-color: var(--light-gray);
+    transition: 0.3s;
+}
+
+nav li a {
+    display: block;
+    width: 160px;
+    padding: 0.8rem 0;
+    color: var(--gray);
+}

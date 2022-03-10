@@ -1,5 +1,5 @@
 /*
-Theme Name: Dev Test
+Theme Name: Chaordic Dev Challenge
 Theme URI: #
 Description: Website created for assessment of development techniques
 Version: 1.0
@@ -42,6 +42,10 @@ body {
     color: var(--gray);
 }
 
+section {
+    margin-bottom: 7rem;
+}
+
 .button {
     border: 1px solid var(--dark-gray);
     border-radius: 4px;
@@ -50,6 +54,24 @@ body {
     background-color: var(--white);
     font-size: 1rem;
     color: var(--gray);
+}
+
+.button:hover {
+    background-color: var(--light-gray);
+    transition: 0.3s;
+}
+
+.title-section {
+    border-top: 2px solid var(--dark-gray);
+    text-align: center;
+    height: 40px;
+    font-size: 1.125rem;
+}
+.title-section span {
+    background-color: var(--white);
+    position: relative;
+    top: -0.75rem;
+    padding: 0 1rem;
 }
 
 /* 
@@ -65,6 +87,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 /* 
 * Header
@@ -150,17 +173,15 @@ nav ul li {
         margin: 1rem 1.25rem;
     }
 }
-nav ul li:hover {
-    background-color: var(--light-gray);
-    transition: 0.3s;
-}
 
-nav li a {
+.nav-button {
     display: block;
     width: 160px;
     padding: 0.8rem 0;
     color: var(--gray);
+    border: none;
 }
+
 
 /* 
 * Content
@@ -171,10 +192,6 @@ nav li a {
         grid-template-columns: 1fr 340px;
         gap: 3.75rem;
     }
-}
-
-.content div {
-    margin-bottom: 2rem;
 }
 
 .content p {
@@ -211,4 +228,103 @@ nav li a {
 
 .input-radio:not(:first-child) {
     margin-left:30px;
+}
+
+.button-form {
+    height: 40px;
+}
+
+
+/* 
+* Products
+*/
+@media (min-width:768px) {
+    .cards-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.card {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+}
+@media (min-width:768px) {
+    .card {
+        max-width: 170px;
+        min-height: 350px;
+        display: block;
+    }
+}
+@media (min-width:1024px) {
+    .card {
+        max-width: 200px;
+    }
+}
+
+.card-header img {
+    width: 170px;
+    height: 130px;
+}
+@media (min-width:1024px) {
+    .card-header img {
+        width: 200px;
+        height: 150px;
+    } 
+}
+
+.card-content {
+    width: 100%;
+}
+
+.card-content__title {
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    margin-top: 0.5rem;
+}
+
+.card-content__description {
+    display: none;
+}
+@media (min-width:768px) {
+    .card-content__description {
+        display: block;
+        font-size: 0.75rem;
+    }
+}
+
+.card-content__prices__oldprice,
+.card-content__prices__installments {
+    font-size: 0.75rem;
+}
+
+.card-content__prices__price {
+    font-weight: bold;
+}
+
+p.card-content__button {
+    margin-top: 0.8rem;
+}
+
+.button-card {
+    display: block;
+    text-align: center;
+}
+
+.more-products {
+    text-align: center;
+}
+
+.button-moreproducts {
+    width: 260px;
+    padding: 0.6rem 0;
+    margin: 2rem auto 0 auto;
+    display: block;
 }

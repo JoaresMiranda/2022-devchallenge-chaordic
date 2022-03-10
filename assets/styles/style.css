@@ -377,3 +377,47 @@ p.card-content__button {
 .share-form .button-form {
     width: 260px;
 }
+
+
+/* 
+* Footer
+*/
+footer {
+    position: relative;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width:768px) {
+    footer {
+        height: 300px;
+    }
+}
+
+footer:before {
+    background-color: var(--dark-gray);
+    content: '';
+    clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container-footer {
+    position: absolute;
+    bottom: 20%;
+    font-size: 0.75rem;
+    color: var(--white);
+}
+@media (min-width:768px) {
+    .container-footer {
+        bottom: 25%;
+    }
+}
+
+.container-footer p {
+    margin-bottom: 0.3rem;
+}

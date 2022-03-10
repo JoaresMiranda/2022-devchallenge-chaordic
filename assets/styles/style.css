@@ -46,6 +46,17 @@ section {
     margin-bottom: 7rem;
 }
 
+label {
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    border: 1px solid var(--dark-gray);
+    padding: 0.5rem;
+}
+
 .button {
     border: 1px solid var(--dark-gray);
     border-radius: 4px;
@@ -210,15 +221,8 @@ nav ul li {
         max-width: 340px;
     }
 }
-.content-form label {
-    font-size: 0.75rem;
-    display: block;
-    margin-bottom: 0.2rem;
-}
 
 .content-form input {
-    border: 1px solid var(--dark-gray);
-    padding: 0.3rem;
     width: 100%;
 }
 
@@ -327,4 +331,49 @@ p.card-content__button {
     padding: 0.6rem 0;
     margin: 2rem auto 0 auto;
     display: block;
+}
+
+
+/* 
+* Share Content with friends
+*/
+.share-friends {
+    text-align: center;
+}
+
+.share-content {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.share-form label {
+    text-align: left;
+}
+
+.share-form input {
+    width: 100%;
+    margin:0.5rem 0 1rem 0;
+}
+
+.share-form p:last-child {
+    margin-top: 0.8rem;
+}
+
+@media (min-width:768px) {
+    .share-form__fields {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .share-form__fields p {
+        margin: 0 !important;
+        width: 340px
+
+    }
+}
+
+.share-form .button-form {
+    width: 260px;
 }

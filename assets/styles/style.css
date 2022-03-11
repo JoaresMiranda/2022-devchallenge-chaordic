@@ -244,9 +244,9 @@ nav ul li {
 */
 @media (min-width:768px) {
     .cards-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -258,14 +258,8 @@ nav ul li {
 }
 @media (min-width:768px) {
     .card {
-        max-width: 170px;
         min-height: 350px;
         display: block;
-    }
-}
-@media (min-width:1024px) {
-    .card {
-        max-width: 200px;
     }
 }
 
@@ -273,10 +267,9 @@ nav ul li {
     width: 170px;
     height: 130px;
 }
-@media (min-width:1024px) {
+@media (min-width:768px) {
     .card-header img {
-        width: 200px;
-        height: 150px;
+        width: 100%;
     } 
 }
 

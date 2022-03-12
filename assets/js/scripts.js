@@ -9,7 +9,6 @@ request.send();
 
 request.onload = function() {
     const productList = request.response;
-    console.log(productList.products[0].installments.count)
     cards(productList);
 }
 
@@ -33,7 +32,5 @@ const cards = (item) => {
 
         return cardsGroup.innerHTML += card       
     });
-
-    return console.log(items[0])
 
 }

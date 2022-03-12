@@ -12,7 +12,14 @@ request.onload = function() {
     cards(productList);
 }
 
+
 const cards = (item) => {
+
+    const formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
+
     const items = item.products.map(product => {
         const card = `
             <div class="card">
@@ -22,9 +29,9 @@ const cards = (item) => {
                 <div class="card-content">
                     <h3 class="card-content__title">${product.name}</h3>
                     <p class="card-content__description">${product.description}</p>
-                    <p class="card-content__prices__oldprice">De: R$ ${product.oldPrice}</p>
-                    <p class="card-content__prices__price">Por: R$ ${product.price}</p>
-                    <p class="card-content__prices__installments">ou ${product.installments.count}x de R$ ${product.installments.value}</p>
+                    <p class="card-content__prices__oldprice">De: ${formatter.format(product.oldPrice)}</p>
+                    <p class="card-content__prices__price">Por: ${formatter.format(product.price)}</p>
+                    <p class="card-content__prices__installments">ou ${product.installments.count}x de ${formatter.format(product.installments.value)}</p>
                     <p class="card-content__button"><a href="#" class="button button-card" value="Comprar">Comprar</a></p>
                 </div>
             </div>

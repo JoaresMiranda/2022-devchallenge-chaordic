@@ -263,12 +263,14 @@ nav ul li {
     }
 }
 
-.card-header img {
+.card-header {
     width: 170px;
     height: 130px;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 @media (min-width:768px) {
-    .card-header img {
+    .card-header {
         width: 100%;
     } 
 }

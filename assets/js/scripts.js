@@ -43,7 +43,6 @@ const buildCard = (data) => {
     `
 }
 
-
 const product = (listProducts) => {
     const items = listProducts.map( products => {
         return buildCard(products)
@@ -51,7 +50,6 @@ const product = (listProducts) => {
 
     return cardsGroup.innerHTML = items
 }
-
 
 const pagination = (nextPage) => {
     console.log(nextPage)

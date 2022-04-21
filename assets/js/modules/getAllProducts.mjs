@@ -10,17 +10,11 @@ const product = (productData) => {
 };
 
 const getAllProducts = (page = 1) => {
-  const requestURL = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${page}`;
-  const request = new XMLHttpRequest();
-
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
-
-  request.onload = function () {
-    const arrayProducts = request.response;
-    product(arrayProducts.products);
-  };
+  fetch(
+    `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${page}`
+  )
+    .then((res) => res.json())
+    .then((data) => product(data.products));
 };
 
 export default getAllProducts;
